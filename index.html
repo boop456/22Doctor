@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DR.Plant — Smart Plant Care & Diagnostics</title>
+
+    <meta name="description" content="DR.Plant provides real-time soil and humidity detection to help your indoor and outdoor plants thrive.">
+    <meta property="og:title" content="DR.Plant — Smart Plant Care">
+    <meta property="og:description" content="Diagnose, Treat, Grow. Give your plant a better life.">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="header-inner">
+            <a class="brand" href="#top" aria-label="DR.Plant Homepage">
+                DR.Plant
+                <span class="sub"><span class="by">by</span> <span class="nama">22Doctor</span><span class="dot">.</span></span>
+            </a>
+
+            <nav class="nav" id="nav" aria-label="Main Navigation">
+                <a href="#features">Features</a>
+                <a href="#work">Product</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <a class="btn btn-small header-cta" href="#contact">ORDER</a>
+
+            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode">
+                <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path>
+                </svg>
+                <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                </svg>
+            </button>
+
+            <button class="cart-btn" id="cartBtn" type="button" aria-label="Open Shopping Cart">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 01-8 0"></path>
+                </svg>
+                <span class="cart-badge" id="cartBadge">0</span>
+            </button>
+
+            <button class="menu-btn" id="menuBtn" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav">
+                <span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+        <!-- HERO -->
+        <section class="hero wrap" id="top">
+            <div class="hero-text">
+                <h1>Diagnose,<br>Treat, Grow.</h1>
+                <p class="lead">Give your plant a better life.</p>
+                <div class="hero-actions">
+                    <a class="btn" href="#work">See the product</a>
+                    <a class="btn btn-ghost" href="#features">Learn more</a>
+                </div>
+            </div>
+
+            <div class="hero-art" aria-hidden="true">
+                <span class="orb orb-1"></span>
+                <span class="orb orb-2"></span>
+                <span class="orb orb-3"></span>
+            </div>
+        </section>
+
+        <!-- FEATURES -->
+        <section class="section wrap" id="features">
+            <div class="section-head">
+                <h2>Introducing DR.Plant</h2>
+                <p>Three short points. Keep it simple and grow healthy.</p>
+            </div>
+
+            <div class="grid grid-3">
+                <article class="card reveal">
+                    <div class="icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 9.5V14"/><path d="M12 3c2 1.5 2 3.5 2 4.5 0 1.2-.9 2-2 2s-2-.8-2-2c0-1 0-3 2-4.5z"/>
+                            <path d="M12 12C8 12 6 10 6 7c3 0 6 1.5 6 5z"/><path d="M12 12c4 0 6-2 6-5-3 0-6 1.5-6 5z"/>
+                            <path d="M3 14c3-2 6-2 9 0s6 2 9 0"/><path d="M3 14v7h18v-7"/><path d="M12 15v4M12 17l-2.5 2M12 17l2.5 2"/>
+                        </svg>
+                    </div>
+                    <h3>Soil Detection</h3>
+                    <p>Detect the current soil condition in real time.</p>
+                </article>
+
+                <article class="card reveal">
+                    <div class="icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17.7 14A8 8 0 1 0 14 17.7"/><path d="M8 6.5C8 6.5 5 10 5 12.2a3 3 0 0 0 6 0C11 10 8 6.5 8 6.5z"/>
+                            <path d="M13.5 7.5s-1.6 1.9-1.6 3a1.6 1.6 0 0 0 3.2 0c0-1.1-1.6-3-1.6-3z"/><circle cx="18" cy="18" r="4"/>
+                            <path d="M19.6 16.4l-3.2 3.2" stroke-width="1.3"/><circle cx="16.9" cy="16.9" r=".9" fill="currentColor" stroke="none"/>
+                            <circle cx="19.1" cy="19.1" r=".9" fill="currentColor" stroke="none"/>
+                        </svg>
+                    </div>
+                    <h3>Humidity Detection</h3>
+                    <p>Detect ambient and root moisture levels instantly.</p>
+                </article>
+
+                <article class="card reveal">
+                    <div class="icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/>
+                        </svg>
+                    </div>
+                    <h3>Real-Time Alerts</h3>
+                    <p>Get instant health push updates on your mobile device.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- PRODUCTS -->
+        <section class="section wrap" id="work">
+            <div class="section-head">
+                <h2>Featured Products</h2>
+                <p>Our line of intelligent plant diagnostics hardware.</p>
+            </div>
+
+            <div class="grid grid-2">
+                <article class="card card-link reveal">
+                    <div class="thumb thumb-a"></div>
+                    <h3>DR.Plant Base Unit</h3>
+                    <p>Smart soil probe with multi-spectrum health sensors.</p>
+                    <div class="card-footer">
+                        <span class="price">$49.00</span>
+                        <button class="btn btn-small add-to-cart-btn" type="button" data-id="dr-plant-base" data-name="DR.Plant Base Unit" data-price="49.00">Add to Cart</button>
+                    </div>
+                </article>
+
+                <article class="card card-link reveal">
+                    <div class="thumb thumb-b"></div>
+                    <h3>DR.Plant Hub</h3>
+                    <p>Central gateway for multi-plant automated alerts.</p>
+                    <div class="card-footer">
+                        <span class="price">$89.00</span>
+                        <button class="btn btn-small add-to-cart-btn" type="button" data-id="dr-plant-hub" data-name="DR.Plant Hub" data-price="89.00">Add to Cart</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="section wrap" id="contact">
+            <div class="contact reveal">
+                <div class="contact-text">
+                    <h2>Let's talk</h2>
+                    <p>Tell us what you need and we will reply within two business days.</p>
+                </div>
+
+                <form class="form" id="form" novalidate>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" autocomplete="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" autocomplete="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+
+                    <button class="btn" type="submit">Send message</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="wrap footer-inner">
+            <span>&copy; 2026 DR.Plant by 22Doctor. All rights reserved.</span>
+            <a href="#top">Back to top</a>
+        </div>
+    </footer>
+
+    <!-- CART DRAWER -->
+    <div class="drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
+    <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Cart" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="drawer-header">
+            <h2>Your Cart</h2>
+            <button class="close-btn" id="closeCartBtn" type="button" aria-label="Close Shopping Cart">&times;</button>
+        </div>
+        <div class="drawer-body" id="cartItemsContainer">
+            <p class="empty-cart-msg">Your cart is currently empty.</p>
+        </div>
+        <div class="drawer-footer">
+            <div class="summary-line">
+                <span>Subtotal</span>
+                <strong id="cartSubtotal">$0.00</strong>
+            </div>
+            <button class="btn" id="proceedCheckoutBtn" type="button" style="width: 100%;" disabled>Proceed to Checkout</button>
+        </div>
+    </aside>
+
+    <!-- CHECKOUT MODAL -->
+    <div class="modal-backdrop" id="checkoutModal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Complete Order</h2>
+                <button class="close-btn" id="closeCheckoutBtn" type="button" aria-label="Close Checkout Modal">&times;</button>
+            </div>
+            <form class="form" id="checkoutForm">
+                <div class="order-summary-box">
+                    <h3>Order Summary</h3>
+                    <div id="checkoutSummaryList"></div>
+                    <hr style="margin: 12px 0; border: 0; border-top: 1px solid var(--line);">
+                    <div class="summary-line" style="margin-bottom: 0;">
+                        <span>Total Due</span>
+                        <strong id="checkoutTotal">$0.00</strong>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="co-name">Full Name</label>
+                    <input id="co-name" name="name" type="text" autocomplete="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="co-email">Email Address</label>
+                    <input id="co-email" name="email" type="email" autocomplete="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="co-address">Shipping Address</label>
+                    <textarea id="co-address" name="address" rows="3" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="co-payment">Payment Method</label>
+                    <select id="co-payment" name="payment" class="form-select" required>
+                        <option value="card">Credit / Debit Card</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="apple">Apple Pay</option>
+                    </select>
+                </div>
+
+                <button class="btn" type="submit" style="width: 100%;">Place Order</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- TOAST -->
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+</body>
+</html>
