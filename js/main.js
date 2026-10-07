@@ -13,7 +13,7 @@
        (For real, automatic delivery use a form service such as Formspree/EmailJS,
        or a small backend.) */
     const CONFIG = {
-        storeEmail: 'albumfrf@example.com'
+        storeEmail: 'fathirfadli456@gmail.com'
     };
 
     const $ = (selector, context = document) => context.querySelector(selector);
