@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>DR.Plant — Smart Plant Care & Diagnostics</title>
 
     <meta name="description" content="DR.Plant provides real-time soil and humidity detection to help your indoor and outdoor plants thrive.">
@@ -11,7 +10,19 @@
     <meta property="og:description" content="Diagnose, Treat, Grow. Give your plant a better life.">
     <meta property="og:type" content="website">
 
-    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+
+    <!-- Set the theme BEFORE first paint so dark-mode users don't see a white flash -->
+    <script>
+        (function () {
+            try {
+                var saved = localStorage.getItem('theme');
+                var dark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+                document.documentElement.setAttribute('data-theme', saved || (dark ? 'dark' : 'light'));
+            } catch (e) { /* keep default light theme */ }
+        })();
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -26,18 +37,21 @@
     <!-- HEADER -->
     <header class="header" id="header">
         <div class="header-inner">
-            <a class="brand" href="#top" aria-label="DR.Plant Homepage">
-                DR.Plant
-                <span class="sub"><span class="by">by</span> <span class="nama">22Doctor</span><span class="dot">.</span></span>
+            <a class="brand" href="#top" aria-label="DR.Plant homepage">
+                <img src="images/logo-mark.png" alt="" class="brand-logo" width="30" height="40">
+                <span class="brand-text">
+                    DR.Plant
+                    <span class="sub"><span class="by">by</span> <span class="nama">22Doctor</span><span class="dot">.</span></span>
+                </span>
             </a>
 
-            <nav class="nav" id="nav" aria-label="Main Navigation">
+            <nav class="nav" id="nav" aria-label="Main navigation">
                 <a href="#features">Features</a>
                 <a href="#work">Product</a>
                 <a href="#contact">Contact</a>
             </nav>
 
-            <a class="btn btn-small header-cta" href="#contact">ORDER</a>
+            <a class="btn btn-small header-cta" href="#work">Order</a>
 
             <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode">
                 <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -49,16 +63,16 @@
                 </svg>
             </button>
 
-            <button class="cart-btn" id="cartBtn" type="button" aria-label="Open Shopping Cart">
+            <button class="cart-btn" id="cartBtn" type="button" aria-label="Open shopping cart" aria-haspopup="dialog">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"></path>
                     <line x1="3" y1="6" x2="21" y2="6"></line>
                     <path d="M16 10a4 4 0 01-8 0"></path>
                 </svg>
-                <span class="cart-badge" id="cartBadge">0</span>
+                <span class="cart-badge" id="cartBadge" aria-hidden="true">0</span>
             </button>
 
-            <button class="menu-btn" id="menuBtn" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav">
+            <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
                 <span></span><span></span>
             </button>
         </div>
@@ -136,24 +150,14 @@
                 <p>Our line of intelligent plant diagnostics hardware.</p>
             </div>
 
-            <div class="grid grid-2">
+            <div class="grid grid-1">
                 <article class="card card-link reveal">
-                    <div class="thumb thumb-a"></div>
-                    <h3>DR.Plant Base Unit</h3>
+                    <div class="thumb thumb-a" role="img" aria-label="DR.Plant Base Unit product image"></div>
+                    <h3>DR.Plant Unit</h3>
                     <p>Smart soil probe with multi-spectrum health sensors.</p>
                     <div class="card-footer">
-                        <span class="price">$49.00</span>
-                        <button class="btn btn-small add-to-cart-btn" type="button" data-id="dr-plant-base" data-name="DR.Plant Base Unit" data-price="49.00">Add to Cart</button>
-                    </div>
-                </article>
-
-                <article class="card card-link reveal">
-                    <div class="thumb thumb-b"></div>
-                    <h3>DR.Plant Hub</h3>
-                    <p>Central gateway for multi-plant automated alerts.</p>
-                    <div class="card-footer">
-                        <span class="price">$89.00</span>
-                        <button class="btn btn-small add-to-cart-btn" type="button" data-id="dr-plant-hub" data-name="DR.Plant Hub" data-price="89.00">Add to Cart</button>
+                        <span class="price">Rp 499.000</span>
+                        <button class="btn btn-small add-to-cart-btn" type="button" data-id="dr-plant-base" data-name="DR.Plant Base Unit" data-price="499000">Add to Cart</button>
                     </div>
                 </article>
             </div>
@@ -163,8 +167,8 @@
         <section class="section wrap" id="contact">
             <div class="contact reveal">
                 <div class="contact-text">
-                    <h2>Let's talk</h2>
-                    <p>Tell us what you need and we will reply within two business days.</p>
+                    <h2>About Us</h2>
+                    <p>22Doctor Adalah perusahaan Berinovasi STEM dengan teknologi berkelanjutan, mmemberi solusi nyata dan membuat hidupmu lebih mudah.<br>Kontak dengan Tim kami untuk bertanya lebih lanjut</p>
                 </div>
 
                 <form class="form" id="form" novalidate>
@@ -200,10 +204,10 @@
 
     <!-- CART DRAWER -->
     <div class="drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
-    <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Cart" role="dialog" aria-modal="true" aria-hidden="true">
+    <aside class="cart-drawer" id="cartDrawer" aria-labelledby="cartTitle" role="dialog" aria-modal="true" aria-hidden="true">
         <div class="drawer-header">
-            <h2>Your Cart</h2>
-            <button class="close-btn" id="closeCartBtn" type="button" aria-label="Close Shopping Cart">&times;</button>
+            <h2 id="cartTitle">Your Cart</h2>
+            <button class="close-btn" id="closeCartBtn" type="button" aria-label="Close shopping cart">&times;</button>
         </div>
         <div class="drawer-body" id="cartItemsContainer">
             <p class="empty-cart-msg">Your cart is currently empty.</p>
@@ -211,27 +215,27 @@
         <div class="drawer-footer">
             <div class="summary-line">
                 <span>Subtotal</span>
-                <strong id="cartSubtotal">$0.00</strong>
+                <strong id="cartSubtotal">Rp 0</strong>
             </div>
-            <button class="btn" id="proceedCheckoutBtn" type="button" style="width: 100%;" disabled>Proceed to Checkout</button>
+            <button class="btn btn-block" id="proceedCheckoutBtn" type="button" disabled>Proceed to Checkout</button>
         </div>
     </aside>
 
     <!-- CHECKOUT MODAL -->
-    <div class="modal-backdrop" id="checkoutModal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-backdrop" id="checkoutModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
         <div class="modal-content">
             <div class="modal-header">
-                <h2>Complete Order</h2>
-                <button class="close-btn" id="closeCheckoutBtn" type="button" aria-label="Close Checkout Modal">&times;</button>
+                <h2 id="checkoutTitle">Complete Order</h2>
+                <button class="close-btn" id="closeCheckoutBtn" type="button" aria-label="Close checkout">&times;</button>
             </div>
             <form class="form" id="checkoutForm">
                 <div class="order-summary-box">
                     <h3>Order Summary</h3>
                     <div id="checkoutSummaryList"></div>
-                    <hr style="margin: 12px 0; border: 0; border-top: 1px solid var(--line);">
-                    <div class="summary-line" style="margin-bottom: 0;">
+                    <hr class="divider">
+                    <div class="summary-line summary-total">
                         <span>Total Due</span>
-                        <strong id="checkoutTotal">$0.00</strong>
+                        <strong id="checkoutTotal">Rp 0</strong>
                     </div>
                 </div>
 
@@ -247,19 +251,18 @@
 
                 <div class="form-group">
                     <label for="co-address">Shipping Address</label>
-                    <textarea id="co-address" name="address" rows="3" required></textarea>
+                    <textarea id="co-address" name="address" rows="3" autocomplete="street-address" required></textarea>
                 </div>
 
                 <div class="form-group">
                     <label for="co-payment">Payment Method</label>
                     <select id="co-payment" name="payment" class="form-select" required>
-                        <option value="card">Credit / Debit Card</option>
-                        <option value="paypal">PayPal</option>
-                        <option value="apple">Apple Pay</option>
+                        <option value="QRIS">QRIS</option>
+                        <option value="Credit / Debit Card">Credit / Debit Card</option>
                     </select>
                 </div>
 
-                <button class="btn" type="submit" style="width: 100%;">Place Order</button>
+                <button class="btn btn-block" type="submit">Place Order</button>
             </form>
         </div>
     </div>
