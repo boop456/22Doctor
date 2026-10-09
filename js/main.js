@@ -8,10 +8,7 @@
     document.documentElement.classList.add('js');
 
     /* ---------- CONFIG ----------
-       A static site cannot send email by itself. The forms below open the visitor's
-       email app with a pre-filled message addressed to YOU. Put your real address here.
-       (For real, automatic delivery use a form service such as Formspree/EmailJS,
-       or a small backend.) */
+       Alamat email tujuan untuk menerima formulir kontak dan detail pesanan. */
     const CONFIG = {
         storeEmail: 'fathirfadli456@gmail.com'
     };
@@ -101,7 +98,6 @@
         }
     };
 
-    // The inline <head> script already set the initial theme; just sync the button label.
     applyTheme(document.documentElement.getAttribute('data-theme') || 'light');
 
     if (themeToggle) {
@@ -113,7 +109,6 @@
         });
     }
 
-    // Follow the OS setting live, unless the visitor picked a theme themselves
     if (window.matchMedia) {
         const mq = window.matchMedia('(prefers-color-scheme: dark)');
         const onSystemChange = (e) => { if (!safeStorage.get('theme')) applyTheme(e.matches ? 'dark' : 'light'); };
@@ -131,7 +126,6 @@
                 const el = entry.target;
                 el.classList.add('is-visible');
                 observer.unobserve(el);
-                // Clear the stagger delay afterwards so hover transitions aren't delayed
                 setTimeout(() => { el.style.transitionDelay = ''; }, 900);
             });
         }, { threshold: 0.15 });
@@ -205,7 +199,6 @@
             return;
         }
 
-        // Keep keyboard focus inside the open dialog
         if (e.key === 'Tab' && active) {
             const items = $$(FOCUSABLE, active).filter((el) => el.offsetParent !== null || el === document.activeElement);
             if (!items.length) return;
@@ -219,7 +212,6 @@
     checkoutModal?.addEventListener('click', (e) => { if (e.target === checkoutModal) closeCheckout(); });
 
     /* ---------- 8. FORM HELPERS ---------- */
-    // Clear the red error state as soon as the visitor edits a field
     document.addEventListener('input', (e) => {
         if (e.target.classList && e.target.classList.contains('is-invalid')) {
             e.target.classList.remove('is-invalid');
@@ -279,7 +271,6 @@
     const CART_KEY = 'dr_plant_cart';
     const MAX_QTY = 99;
 
-    // Product catalog comes from the page itself, so price/name can't be tampered with in storage
     const catalog = {};
     $$('.add-to-cart-btn').forEach((btn) => {
         const price = parseFloat(btn.dataset.price);
@@ -288,7 +279,6 @@
         }
     });
 
-    // Cart is stored as [{ id, qty }]
     const loadCart = () => {
         try {
             const raw = JSON.parse(safeStorage.get(CART_KEY));
@@ -392,7 +382,6 @@
             cart = cart.filter((i) => i.qty > 0);
             saveCart();
 
-            // The re-render replaced the clicked button; put focus back on a matching control
             const sameBtn = $(`.qty-btn[data-action="${qtyBtn.dataset.action}"][data-id="${qtyBtn.dataset.id}"]`, cartItemsContainer);
             if (sameBtn) sameBtn.focus();
             else if (closeCartBtn) closeCartBtn.focus();
@@ -421,7 +410,6 @@
 
         if (checkoutTotal) checkoutTotal.textContent = formatRupiah(subtotal);
 
-        // Switch dialogs without restoring focus to the (now hidden) cart button in between
         closeCart(false);
         openCheckout();
     });
