@@ -12,7 +12,7 @@
 
     <link rel="icon" href="images/favicon.png" type="image/png">
 
-    <!-- Set the theme BEFORE first paint so dark-mode users don't see a white flash -->
+    <!-- Set theme BEFORE first render so dark-mode users don't see a white flash (FOUC) -->
     <script>
         (function () {
             try {
@@ -38,7 +38,7 @@
     <header class="header" id="header">
         <div class="header-inner">
             <a class="brand" href="#top" aria-label="DR.Plant homepage">
-                <img src="images/logo-mark.png" alt="" class="brand-logo" width="30" height="40">
+                <img src="images/logo-mark.png" alt="22Doctor Logo" class="brand-logo" width="30" height="40">
                 <span class="brand-text">
                     DR.Plant
                     <span class="sub"><span class="by">by</span> <span class="nama">22Doctor</span><span class="dot">.</span></span>
@@ -91,8 +91,11 @@
                 </div>
             </div>
 
+            <!-- Ambience video -->
             <div class="hero-art" aria-hidden="true">
-                <span class="orb orb-1"></span>
+                <video class="hero-video" autoplay loop muted playsinline>
+                    <source src="videos/ambience.mp4" type="video/mp4">
+                </video>
                 <span class="orb orb-2"></span>
                 <span class="orb orb-3"></span>
             </div>
@@ -152,10 +155,13 @@
 
             <div class="grid grid-1">
                 <article class="card card-link reveal">
-                    <div class="thumb thumb-a" role="img" aria-label="DR.Plant Base Unit product image"></div>
+                    <!-- Product system diagram -->
+                    <div class="thumb-container">
+                        <img src="images/system.jpg" alt="DR.Plant system device placement" class="product-img" loading="lazy">
+                    </div>
                     <h3>DR.Plant Base Unit</h3>
                     <span class="sale-badge">Save 38%</span>
-                    <p>Smart soil probe with multi-spectrum health sensors.</p>
+                    <p>Smart soil probe with multi-spectrum health sensors & automatic watering system.</p>
                     <div class="card-footer">
                         <span class="price">
                             <s class="price-old">Rp 800.000</s>
